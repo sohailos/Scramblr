@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_select">Select</string>
+    <string name="button_scramble">Scramble</string>
+    <string name="button_unscramble">Unscramble</string>
+</resources>
