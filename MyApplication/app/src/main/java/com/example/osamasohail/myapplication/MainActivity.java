@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             Intent passImage = new Intent(this, ImageOptions.class);
             passImage.putExtra("uri", data.getData());
             startActivity(passImage);
-
         }
     }
 }
