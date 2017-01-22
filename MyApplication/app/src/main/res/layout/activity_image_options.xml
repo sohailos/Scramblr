@@ -10,42 +10,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.osamasohail.myapplication.ImageOptions">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/button2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
+        android:layout_alignParentStart="true"/>
 
     <Button
         android:text="@string/button_scramble"
-        android:layout_gravity="bottom|left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:layout_marginBottom="21dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
         android:onClick="scrambleThis"/>
 
     <Button
         android:text="@string/button_unscramble"
-        android:layout_gravity="bottom|right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/button"
-        android:layout_marginRight="27dp"
-        android:layout_marginEnd="27dp"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:onClick="unscrambleThis"/>
+
 
 </RelativeLayout>

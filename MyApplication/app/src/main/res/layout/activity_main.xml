@@ -4,13 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:weightSum="1.0">
 
-    <Button android:id="@+id/selectImage"
-        android:layout_gravity="bottom"
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_select"
-        android:onClick="selectImage"/>
+        android:src="@drawable/ic_camera_black_24dp"
+        android:layout_above="@+id/selectImage"
+        android:id="@+id/imageButton"
+        android:layout_weight=".5"/>
+
+    <ImageButton android:id="@+id/selectImage"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_upload_black_24dp"
+        android:onClick="selectImage"
+        android:layout_weight=".5"/>
 </LinearLayout>
 
