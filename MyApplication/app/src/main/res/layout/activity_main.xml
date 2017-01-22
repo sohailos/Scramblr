@@ -13,7 +13,8 @@
         android:src="@drawable/ic_camera_black_24dp"
         android:layout_above="@+id/selectImage"
         android:id="@+id/imageButton"
-        android:layout_weight=".5"/>
+        android:layout_weight=".5"
+        android:onClick="captureImage"/>
 
     <ImageButton android:id="@+id/selectImage"
         android:layout_alignParentBottom="true"
