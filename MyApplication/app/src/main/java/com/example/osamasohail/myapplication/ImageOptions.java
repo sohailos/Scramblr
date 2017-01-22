@@ -20,11 +20,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.Manifest;
 import android.content.Intent;
 import android.os.Environment;
+import android.widget.Toast;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.util.Arrays;
+
+import static android.app.PendingIntent.getActivity;
 
 public class ImageOptions extends AppCompatActivity {
 
@@ -82,7 +86,7 @@ public class ImageOptions extends AppCompatActivity {
         builder.setCancelable(false);
 
         // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Scramble", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String m_Text = input.getText().toString();
@@ -147,6 +151,9 @@ public class ImageOptions extends AppCompatActivity {
                 mediaScanIntent.setData(contentUri);
                 getApplicationContext().sendBroadcast(mediaScanIntent);
 
+                Toast.makeText(getApplicationContext(), "Image Scrambld!",
+                        Toast.LENGTH_LONG).show();
+
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -168,7 +175,7 @@ public class ImageOptions extends AppCompatActivity {
         builder.setCancelable(false);
 
         // Set up the buttons
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("UnScramble", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String m_Text = input.getText().toString();
@@ -241,6 +248,9 @@ public class ImageOptions extends AppCompatActivity {
 
                 //Bitmap newbitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
                 coolShit.saveBitmap("bitmap.png",encryptedbitmap.getWidth(),encryptedbitmap.getHeight(),decryptedints);
+
+                Toast.makeText(getApplicationContext(), "Image UnScrambld!",
+                        Toast.LENGTH_LONG).show();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
